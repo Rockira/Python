@@ -37,7 +37,7 @@ headers = {'User-Agent': random.choice(meizi_headers)}
 mziTu = 'http://www.mzitu.com/'
 # 定义存储位置
 global save_path
-save_path = 'F:\BeautifulPictures'
+save_path = 'E:\BeautifulPictures'
 
 
 # 创建文件夹
@@ -116,7 +116,7 @@ def main():
             page = mziTu
         else:
             page = mziTu + 'page/' + str(i)
-        file = save_path + '\\' + str(i)
+        file = save_path
         createFile(file)
         # 下载每页的图片
         print("套图页码：" + page)

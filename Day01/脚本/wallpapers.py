@@ -35,10 +35,10 @@ global headers
 headers = {'User-Agent': random.choice(meizi_headers)}
 # 爬图地址
 bizhi = 'http://wallpaperswide.com'
-resolution = '1920x1080'
+resolution = '3440x1440'
 # 定义存储位置
 global save_path
-save_path = 'D:\Pictures\\' + resolution
+save_path = 'E:\Pictures\\' + resolution
 
 
 # 创建文件夹
@@ -98,10 +98,10 @@ def main():
     # 获取首页总页数
     img_max = soup.find('div', class_='pagination').find_all('a')[1].text
     print("总页数:"+img_max)
-    for i in range(2, int(img_max) + 1):
+    for i in range(1, int(img_max) + 1):
         # 单位为秒，1-3 随机数
         # time.sleep(random.randint(1, 3))
-        time.sleep(1)
+        # time.sleep(1)
         # 获取每页的URL地址
         if i == 1:
             pageUrl = bizhi
